@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4d5cf72bb4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&family=Roboto:wght@300;400&family=Texturina:opsz,wght@12..72,300;12..72,400;12..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/app/sass/swiperjs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <title>products page</title>
+
+    <!-- Demo styles -->
+    <style>
+      .swiper {
+        max-width: 32.5em;
+        max-height: 22.5em;
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* height: 30%; */
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* product description */
+      .product__wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        margin: auto 0;
+      }
+      .product__wrapper > * + * {
+        margin-left: 5em;
+      }
+      .product__description {
+        max-width: 40rem;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .description__wrapper > * + * {
+        margin-top: 0.5em;
+        /* margin-left: 1em; */
+      }
+      .product__description > * + * {
+        margin-top: 1.3em;
+      }
+      .description {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        font-size: 4rem;
+        font-weight: 200;
+        font-family: roboto;
+      }
+      .description__value {
+        text-transform: lowerCase;
+        margin-left: 0.5em;
+        font-size: 2rem;
+        font-weight: 100;
+      }
+      .btn {
+        outline: none;
+        border: none;
+        padding: 0.5em 0.8em;
+        font-size: 2.7rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        width: 100%;
+      }
+      .btn--call {
+        visibility: hidden;
+      }
+      .btn__wrapper:hover .btn--call {
+        /* phone number will popup */
+        background-color: #9c9c9c;
+        visibility: visible;
+      }
+
+      .header {
+        display: flex;
+        justify-content: stretch;
+      }
+
+      /* updated version of swiper */
+      .swiper--updated {
+        margin: 0;
+      }
+
+      @media screen and (max-width: 780px) {
+        .product__wrapper {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 7em;
+        }
+
+        .product__wrapper > * + * {
+          margin-top: 3em;
+          margin-left: 0;
+        }
+
+        .product__description {
+          max-width: 52rem;
+          width: 100%;
+          margin-bottom: 3em;
+        }
+
+        .description {
+          font-size: 3rem;
+        }
+
+      }
+      @media screen and (max-width: 900px) {
+        .products__header {
+          background-image: none;
+          /* background-color: red; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="products">
+      <header class="header products__header container">
+        <nav class="primary-nav">
+          <a href="/index.html" class="header__logo">Wraps</a>
+          <ul class="social-media-links">
+            <li>
+              <a
+                href="https://t.me/wrapsforyou"
+                target="_blank"
+                class="social-media-link"
+              >
+                <img
+                  src="/img/icons/icons8-sent-64.png"
+                  alt="wraps telegram account"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="" class="social-media-link">
+                <img
+                  src="/img/icons/icons8-instagram-64.png"
+                  alt="wraps telegram account"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="" class="social-media-link">
+                <img
+                  src="/img/icons/icons8-facebook-64.png"
+                  alt="wraps telegram account"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Swiper -->
+        <div class="product__wrapper">
+          <div class="swiper mySwiper swiper--updated">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/img-1.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-4.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-5.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-6.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-7.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-8.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-9.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-10.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-11.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img-12.jpg" alt="" />
+              </div>
+            </div>
+            <div
+              class="swiper-button-next swiper-btn--updated swiper-btn-next--updated"
+            ></div>
+            <div
+              class="swiper-button-prev swiper-btn--updated swiper-btn-prev--updated"
+            ></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <aside class="product__description">
+            <div class="description__wrapper">
+              <h4 class="description">
+                Description:
+                <p class="description__value">Variety of products</p>
+              </h4>
+              <h4 class="description">
+                Size:
+                <p class="description__value">Small - Large</p>
+              </h4>
+              <h4 class="description">
+                Color:
+                <p class="description__value">Variety of Colors</p>
+              </h4>
+            </div>
+            <div class="order__wrapper">
+              <button class="btn btn--order btn--call">0914220188</button>
+              <button class="btn btn--order">order us!</button>
+            </div>
+          </aside>
+        </div>
+      </header>
+    </section>
+  </body>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</html>

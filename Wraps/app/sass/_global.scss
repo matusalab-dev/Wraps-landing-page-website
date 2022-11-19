@@ -1,0 +1,73 @@
+// @import url("https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap");
+
+// color variables
+$primary-color: #172248;
+$secondary-color: #d0b194;
+$teritiary-color: #eedfd2;
+
+// font variables
+$primary-font: "Judson", serif;
+$text-font: "Roboto", sans-serif;
+$logo-font: "Texturina", serif;
+
+// responsive break points
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  font-size: 62.5%; // 10/16 = 0.62 * 100% = 62.5%
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1100px) {
+    // background-color: red;
+    font-size: 45%;
+  }
+  @media screen and (max-width: 422px) {
+    font-size: 40%;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $primary-font;
+  background: $secondary-color;
+  color: $primary-color;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+
+  //   @media  screen and (max-width: 900px) {
+  //   background-color: red;
+  // }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  // height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  display: inline-block;
+}

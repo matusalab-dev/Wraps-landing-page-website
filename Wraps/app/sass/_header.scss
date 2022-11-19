@@ -1,0 +1,102 @@
+.header {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  &__hero {
+    display: flex;
+    margin: 7em 0;
+    & > * + * {
+      margin-left: 3em;
+    }
+    
+   @media screen and (max-width: 900px) {
+      // background-color: red;
+      justify-content: center;
+      }
+  }
+
+    @media screen and (max-width: 900px) {
+      // background-color: red;
+      // display: none;
+      background-image: linear-gradient(to right ,rgba($secondary-color,0.9), rgba($teritiary-color,0.7)),url(/img/img-11.jpg);
+      background-size: cover;
+      background-position: 40%;
+      background-repeat: no-repeat;
+    }
+  &__logo {
+    font-size: 5.8rem;
+    font-family: $logo-font;
+    font-weight: 500;
+
+     @media screen and (max-width: 770px) {
+      font-size: 4.6rem;
+    }
+  }
+  &__hero-image {
+    width: 30em;
+    max-width: 100%;
+    // transform: translate(-2em);
+    transform: rotateY(25turn);
+    @media screen and (max-width: 900px) {
+      // background-color: red;
+      display: none;
+    }
+  }
+
+  .primary--heading {
+    font-size: 6rem;
+    line-height: 1;
+    text-align: left;
+    @media screen and (max-width: 900px) {
+      font-size: 8rem;
+    }
+    @media screen and (max-width: 344px) {
+      font-size: 5rem;
+    }
+
+  }
+
+  &__sub-title {
+    font-size: 3rem;
+    @media screen and (max-width: 886px) {
+      // background-color: red;
+      max-width: 45ch;
+    }
+  }
+  &__description {
+    // height: 100vh;
+  }
+}
+.primary-nav {
+  margin-top: 1.8em;
+  // background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  // align-items: center;
+  width: 100%;
+  .social-media-links {
+    list-style: none;
+    display: flex;
+    max-width: 18em;
+    width: 50%;
+    justify-content: space-between;
+    align-items: flex-end;
+      // .social-media-link {
+      //   // align-self: flex-end;
+      // }
+
+     @media screen and (max-width: 770px) {
+       max-width: 12em;
+       width: 43%;
+       justify-content: flex-end;
+    }
+  }
+}
+
+.secondary--heading {
+  font-size: 7rem;
+  line-height: 1;
+  text-align: center;
+}

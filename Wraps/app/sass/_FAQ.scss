@@ -1,0 +1,111 @@
+.FAQ {
+  position: relative;
+  max-width: 50em;
+  margin: 0 auto;
+  @media screen and (max-width: 744px) {
+    max-width: 35em;
+  }
+  // height: 120rem;
+  padding-bottom: 2em;
+  margin: 15rem auto;
+
+  .teritiary--heading {
+    font-size: 5rem;
+    line-height: 1;
+    text-align: left;
+  }
+
+  &__heading {
+    color: $primary-color;
+    font-size: 6.5rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    position: relative;
+    @media screen and (max-width: 590px) {
+      // background-color: red;
+      font-size: 5.5rem;
+    }
+
+    &::after {
+      content: "+";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -4px;
+      left: 96%;
+      width: 7rem;
+      height: 7rem;
+      margin: auto;
+      font-size: 1.5em;
+      border: 2px solid #172248;
+      border-radius: 0.04em;
+
+      @media screen and (max-width: 590px) {
+        // background-color: red;
+        font-size: 1.4em;
+        width: 5rem;
+        height: 5rem;
+        top: 10px;
+      }
+      //   padding: 0 0em;
+    }
+  }
+  &__list {
+    margin-top: 4em;
+
+    & > * + * {
+      margin-top: 2em;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &__details {
+      color: $secondary-color;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+
+    &__description {
+      background-color: $secondary-color;
+      color: $primary-color;
+      height: 0;
+      transition: all 0.5s ease-in;
+      overflow: hidden;
+      opacity: 0;
+      max-width: 44ch;
+    }
+  }
+}
+
+.FAQ__list .FAQ__wrapper__details.active .FAQ__wrapper__description {
+  height: auto;
+  opacity: 0.8;
+}
+
+.FAQ__list .FAQ__wrapper__details.active .FAQ__heading::after {
+  content: "-";
+}
+hr {
+  color: #172248;
+  width: 100%;
+  // margin-left: 0;
+}
+.learn-more-bar {
+  color: #172248;
+  width: 40%;
+  margin-left: 0;
+}
+
+.learn-more-bar--comfort {
+  width: 100%;
+  // margin: 0 auto;
+  margin-left: auto;
+  margin-bottom: 9rem;
+}
+
+.heading__comfort {
+  margin: 7rem 0;
+}

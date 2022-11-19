@@ -1,0 +1,28 @@
+.container {
+  max-width: 120em;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.spacer--lg > * + * {
+  margin-top: 2em;
+}
+.spacer--sm > * + * {
+  margin-top: 1em;
+}
+
+.heading {
+  font-family: $primary-font;
+  font-weight: 800;
+  text-transform: capitalize;
+  // text-align: center;
+  letter-spacing: 0.001em;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row {
+    display: flex;
+}
